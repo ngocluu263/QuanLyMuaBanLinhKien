@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QuanLyMuaBanLinhKien.Properties {
+namespace DataAccessLayer.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,8 +26,8 @@ namespace QuanLyMuaBanLinhKien.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-O5UGA65\\SQLEXPRESS;Initial Catalog=QLBH;Persist Security Info" +
-            "=True;User ID=sa;Password=sapassword")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-O5UGA65\\SQLEXPRESS;Initial Catalog=QLBH;User ID=sa;Password=s" +
+            "apassword;Encrypt=False;TrustServerCertificate=True")]
         public string QLBHConnectionString {
             get {
                 return ((string)(this["QLBHConnectionString"]));

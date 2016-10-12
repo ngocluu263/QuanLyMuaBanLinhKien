@@ -87,6 +87,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\AccountType.cs" />
+    <Compile Include="QLBHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLBHDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLBHDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="View\frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +108,12 @@
     </Compile>
     <Compile Include="View\frmDatabaseConfig.Designer.cs">
       <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmNhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmNhaCungCap.Designer.cs">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmQuanLyHoaDon.cs">
       <SubType>Form</SubType>
@@ -143,6 +159,9 @@
     <EmbeddedResource Include="View\frmDatabaseConfig.resx">
       <DependentUpon>frmDatabaseConfig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmNhaCungCap.resx">
+      <DependentUpon>frmNhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmQuanLyHoaDon.resx">
       <DependentUpon>frmQuanLyHoaDon.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +202,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLBHDataSet.xsc">
+      <DependentUpon>QLBHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHDataSet.xss">
+      <DependentUpon>QLBHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHDataSet1.xsc">
+      <DependentUpon>QLBHDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLBHDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLBHDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLBHDataSet1.xss">
+      <DependentUpon>QLBHDataSet1.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">
+      <Project>{56954ca3-36d8-4b4d-8886-6ad3b6c54032}</Project>
+      <Name>BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{f4513440-03c1-49cf-8342-88fc72a4e259}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{e72f9698-7a77-4880-9973-e285464569b7}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

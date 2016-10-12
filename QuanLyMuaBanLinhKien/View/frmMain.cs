@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QuanLyMuaBanLinhKien.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -88,6 +89,21 @@ namespace QuanLyMuaBanLinhKien
                 frmQuanLyHoaDon frmHoaDon = new frmQuanLyHoaDon();
                 frmHoaDon.MdiParent = this;
                 frmHoaDon.Show();
+            }
+        }
+
+        private void btnNhaCungCap_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form form = CheckAvailable(typeof(frmNhaCungCap));
+            if (form != null)
+            {
+                form.Activate();
+            }
+            else
+            {
+                frmNhaCungCap frmNCC = new frmNhaCungCap();
+                frmNCC.MdiParent = this;
+                frmNCC.Show();
             }
         }
     }

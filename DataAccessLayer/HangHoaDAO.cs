@@ -11,20 +11,5 @@ namespace DataAccessLayer
     public class HangHoaDAO
     {
         DbConnect db = new DbConnect();
-
-        public DataTable GetData()
-        {
-
-        }
-
-        public DataTable GetDataById(string Id)
-        {
-
-        }
-
-        public int Insert(eSanPham obj)
-        {
-
-        }
     }
 }

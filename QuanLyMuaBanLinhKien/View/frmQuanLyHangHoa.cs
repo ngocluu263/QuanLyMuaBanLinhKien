@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QuanLyMuaBanLinhKien.Enum;
 
+using DataAccessLayer;
+
 namespace QuanLyMuaBanLinhKien
 {
     public partial class frmQuanLyHangHoa : DevExpress.XtraEditors.XtraForm
@@ -25,7 +27,8 @@ namespace QuanLyMuaBanLinhKien
 
         private void frmQuanLyHangHoa_Load(object sender, EventArgs e)
         {
-
+            // TODO: This line of code loads data into the 'qLBHDataSet.SanPham' table. You can move, or remove it, as needed.
+            this.sanPhamTableAdapter.Fill(this.qLBHDataSet.SanPham);
         }
 
         private void DeactiveButton()
