@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccessLayer;
+using System.Data.Linq;
 
 namespace QuanLyMuaBanLinhKien.View
 {
@@ -20,7 +21,11 @@ namespace QuanLyMuaBanLinhKien.View
 
         private void frmNhaCungCap_Load(object sender, EventArgs e)
         {
-            this.nhaCungCapTableAdapter.Fill(this.qLBHDataSet1.NhaCungCap);
+            DBQuanLyDataContext DB = new DBQuanLyDataContext();
+            Table<NhaCungCap> NhaCungCap = DB.GetTable<NhaCungCap>();
+            var query = from ncc in NhaCungCap
+                        select ncc;
+            gridNhaCungCap.DataSource = query;
         }
     }
 }

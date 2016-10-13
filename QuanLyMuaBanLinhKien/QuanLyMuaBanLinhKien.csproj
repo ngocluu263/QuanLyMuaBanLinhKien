@@ -87,16 +87,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enum\AccountType.cs" />
-    <Compile Include="QLBHDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBHDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="QLBHDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>QLBHDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View\frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,28 +192,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QLBHDataSet.xsc">
-      <DependentUpon>QLBHDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLBHDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLBHDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLBHDataSet.xss">
-      <DependentUpon>QLBHDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="QLBHDataSet1.xsc">
-      <DependentUpon>QLBHDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QLBHDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QLBHDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QLBHDataSet1.xss">
-      <DependentUpon>QLBHDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BusinessLogicLayer\BusinessLogicLayer.csproj">

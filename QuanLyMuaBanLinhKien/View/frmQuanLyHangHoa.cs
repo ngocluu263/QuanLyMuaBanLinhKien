@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using QuanLyMuaBanLinhKien.Enum;
 
 using DataAccessLayer;
+using System.Data.Linq;
 
 namespace QuanLyMuaBanLinhKien
 {
@@ -27,8 +28,15 @@ namespace QuanLyMuaBanLinhKien
 
         private void frmQuanLyHangHoa_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qLBHDataSet.SanPham' table. You can move, or remove it, as needed.
-            this.sanPhamTableAdapter.Fill(this.qLBHDataSet.SanPham);
+            DBQuanLyDataContext DB = new DBQuanLyDataContext();
+            Table<SanPham> SanPham = DB.GetTable<SanPham>();
+            Table<NhaCungCap> NhaCungCap = DB.GetTable<NhaCungCap>();
+            Table<LoaiHang> LoaiHang = DB.GetTable<LoaiHang>();
+            var query = from sp in SanPham
+                        join ncc in NhaCungCap on sp.maNhaCungCap equals ncc.maNhaCungCap
+                        join lh in LoaiHang on sp.maLoaiHang equals lh.maLoaiHang
+                        select new {sp.maSanPham, sp.tenSanPham, lh.tenLoaiHang, ncc.tenNhaCungCap, sp.donViTinh, sp.donGia, sp.soLuongTon };
+            gridHangHoa.DataSource = query;
         }
 
         private void DeactiveButton()
